@@ -3,7 +3,7 @@ package fileOne;
 public class CheckPalindrome {
 	
 	public static void checkPalindrome(String testData) {
-		String cleanData = testData.replaceAll("^[!44]","");
+		String cleanData = testData.replaceAll("[^a-zA-Z0-9_-]","").toLowerCase();
 		System.out.println(cleanData);
 		String reverseString ="";
 		int stringLength = cleanData.length();
