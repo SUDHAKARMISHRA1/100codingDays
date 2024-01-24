@@ -18,7 +18,7 @@ public class ValidParentheses {
 	}
 
 	public static void main(String[] args) {
-		String testData = "[()]][";
+		String testData = "[()]";
 		ValidParentheses.checkParentheses(testData);
 	}
 }
