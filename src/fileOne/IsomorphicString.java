@@ -2,18 +2,22 @@ package fileOne;
 
 import java.util.HashMap;
 
-public class SudhakarPalyground {
+public class IsomorphicString {
 
 
-	public boolean isIsomorphic(String s, String t) {
-		if(s.length()!=t.length()){
+	public boolean getIsomorphic(String firstData, String secondData) {
+		
+		if(firstData.length()!=secondData.length()){
 			return false;
 		}
+		
 		HashMap<Character,Character> map1=new HashMap<>();
 		HashMap<Character,Boolean> map2=new HashMap<>();
-		for(int i=0;i<s.length();i++){
-			char ch1=s.charAt(i);
-			char ch2=t.charAt(i);
+		for(int i=0;i<firstData.length();i++){
+			
+			char ch1=firstData.charAt(i);
+			char ch2=secondData.charAt(i);
+			
 			if(map1.containsKey(ch1)==true){
 				if(map1.get(ch1)!=ch2){
 					return false;
@@ -28,23 +32,13 @@ public class SudhakarPalyground {
 			}
 		}
 		return true;
-	}
-
+		
+	}	
 	public static void main(String[] args) {
-		String firstData = "badc";
-		String secondData = "baba";
+		String firstData = "ram";
+		String secondData = "bai";
 		SudhakarPalyground s = new SudhakarPalyground();
-		boolean b =  s.isIsomorphic(firstData, secondData);
-		System.out.println(b);
+		boolean  result=  s.isIsomorphic(firstData, secondData);
+		System.out.println(result);
 	}
-
 }
-
-
-
-
-
-
-
-
-
